@@ -127,6 +127,8 @@
             <p>Postgres is an open source database that for which Flask has a great extension for communication between the back end application and the database.  </p>
             <h3>Python 3 (https://www.python.org/)</h3>
             <p>Python is an easy to learn programming language that is one of the most popular and in demand programming languages.  </p>
+            <h3>Argon 2 (https://github.com/p-h-c/phc-winner-argon2)</h3>
+            <p>Argon 2 is a password hashing algorithm that we intend to use to store users passwords in our database, it is considered to be extremely secure as well as resistant to brute force attacks.</p2>
             <h2>Front End</h2>
             <p class="draft_content">Found some stuff that will be useful for the front end while researching the maps API.</p>
             <p class="draft_content">(https://developers.google.com/maps/documentation/ios-sdk/cloud-setup) We would need an account with google cloud to anable billing for the use of maps above a certain usage. </p>
@@ -244,7 +246,7 @@
             <p>As the project relies on a number of external services such as Google Maps, we must take steps to keep our API keys safe.  An API key released into the wild could result in huge costs if not detected early or if measures arent taken to restrict the usage of the key.  (https://ozguralp.medium.com/unauthorized-google-maps-api-key-usage-cases-and-why-you-need-to-care-1ccb28bf21e).  Secret stores should be utilised to prevent any API keys being required to be embedded in code directly, and git Pre-Commit hooks should be utilised to prevent inadvertent publishing of secrets to repositories.</p>
             <h3>Password Storage</h3>
             <p>As an account is required to access and use The Pursuit of Hoppiness, there is always the risk of data breaches exposing user’s information to wrong doers. We plan to combat and prevent this in two ways; the first being passwords be inherently strong. They must meet the requirement of eight characters in length, while also containing at least one uppercase letter and special character.
-The second action being the implementation of password <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGPersProgGuide/html/s0506passwordhashing01.html" target="_blank">hashing.</a> Password hashing being a process in which passwords are transformed (hashed) from their initial states into a new string of letters and numbers. When logging into the website again, the password you enter is then hashed so as to match your intial password, compared to the hashed string in our database, and then approved or denied depending on whether the password is correct or not.</p>  
+The second action being the implementation of password <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGPersProgGuide/html/s0506passwordhashing01.html" target="_blank">hashing.</a> Password hashing being a process in which passwords are transformed (hashed) from their initial states into a new string of letters and numbers. When logging into the website again, the password you enter is then hashed so as to match your intial password, compared to the hashed string in our database, and then approved or denied depending on whether the password is correct or not.</p>
 
             <h2>Complexity</h2>
             <h2>Legality</h2>
