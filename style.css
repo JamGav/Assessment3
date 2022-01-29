@@ -403,6 +403,12 @@ p.note {
 
 
 }
+#timeline_table > tbody > tr.table_divide {
+    border-bottom: 3px solid;
+    border-bottom-color: red;
+    border-bottom-width: thick;
+
+}
 
 #timeline_table > tbody > tr.alt_row > td {
     background: gray;
