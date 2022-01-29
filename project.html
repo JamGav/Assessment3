@@ -18,7 +18,7 @@
             <li class="active"><a href="project.html">Project</a></li>
             <li><a href="skillsjobs.html">Skills and Jobs</a></li>
             <li><a href="reflection.html">Group Reflection</a></li>
-		
+
         </ul>
 
     </div>
@@ -34,9 +34,9 @@
             <li><a href="#Timeframe">Timeframe</a></li>
             <li><a href="#Risks">Risks</a></li>
             <li><a href="#Group processes and communications">Group processes and communications</a></li>
-            
+
         </ul>
-        
+
     <div class="main_content_area">
         <div id="Overview" class="tech_content_card">
             <span class="go_to_top"><a href="#top">↸ Back to top</a></span>
@@ -57,7 +57,7 @@
     </div>
 
     </div>
-    
+
     <div class="main_content_area">
         <div id="Aims" class="tech_content_card">
             <span class="go_to_top"><a href="#top">↸ Back to top</a></span>
@@ -65,7 +65,7 @@
             <p></p>
         </div>
     </div>
-    
+
     <div class="main_content_area">
         <div id="Plans and Progress" class="tech_content_card">
             <span class="go_to_top"><a href="#top">↸ Back to top</a></span>
@@ -97,7 +97,7 @@
                 <li>Allow a user to view basic venue information(Opening hours, Cost guide, Beer selection)</li>
                 <li>Allow a user to record information for a new product(beer)</li>
                 <li>Allow a user to record a rating and a comment on an existing product</li>
-                
+
             </ul>
             <p>These are the only goals for Phase 1.  The goals are limited to reduce scope creep and keep development costs and time low.</p>
             <p>Within these goals there are many sub items that themselves will be quite in depth.  The intention of this list is to provide a clear direction to the development team that these are the only main objectives that we should be working towards</p>
@@ -150,7 +150,7 @@
                 <thead>
                 <tr>
                     <th>Week</th>
-                    <th>Description</th>            
+                    <th>Description</th>
                 </tr>
                     </thead>
                 <tbody>
@@ -228,7 +228,7 @@
                     <td class="week_field">16</td>
                     <td></td>
                 </tr>
-                
+
                 </tbody>
             </table>
         </div>
@@ -242,10 +242,12 @@
             <h2>Security</h2>
             <h3>API Key Storage</h3>
             <p>As the project relies on a number of external services such as Google Maps, we must take steps to keep our API keys safe.  An API key released into the wild could result in huge costs if not detected early or if measures arent taken to restrict the usage of the key.  (https://ozguralp.medium.com/unauthorized-google-maps-api-key-usage-cases-and-why-you-need-to-care-1ccb28bf21e).  Secret stores should be utilised to prevent any API keys being required to be embedded in code directly, and git Pre-Commit hooks should be utilised to prevent inadvertent publishing of secrets to repositories.</p>
+            <h3>Password Storage</h3>
+            <p>As an account is required to access and use The Pursuit of Hoppiness, there is always the risk of data breaches exposing user’s information to wrong doers. To combat this, <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGPersProgGuide/html/s0506passwordhashing01.html" target="_blank">hashing</a> of passwords is something we must implement so as to not expose our user’s passwords to those looking to take advantage.</p>
             <h2>Complexity</h2>
             <h2>Legality</h2>
             <h2>Similar products in the market</h2>
-            
+
             <p></p>
         </div>
     </div>
@@ -270,6 +272,6 @@
             <p>All official communication is contained through these applications, but other communication platforms, such as Facebook messenger and Discord are used for more casual check-ins and to chase members if they are running late to a meeting.</p>
         </div>
     </div>
-        
+
 </body>
 </html>
