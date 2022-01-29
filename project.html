@@ -70,7 +70,8 @@
         <div id="Plans and Progress" class="tech_content_card">
             <span class="go_to_top"><a href="#top">↸ Back to top</a></span>
             <h1>Plans and Progress</h1>
-            <p></p>
+            <h3>Initial Data Seeding</h3>
+            <p>As the projects Phase 1 aim is limited to the Perth area, we must be able to provide data to the users to kick start organic growth.  Initially it was thought that web information could be scraped from a source like Google maps, but this prompted some ethical considerations once it was realised that the same thing could happen with the data that we are holding.  Consideration is given to budget when deciding how best to collect this data.  Pursuit of Hoppiness is a small operation and can ill afford to send its staff out on beer hunting missions during the limited available time to produce a proof of concept product.  A number of market research companies exist within the Perth area that support the hospitality sector.  This work could be outsourced to a market researcher and then ingested into the database to provide a starting point for users.</p>
         </div>
     </div>
 
@@ -126,6 +127,9 @@
             <p>Postgres is an open source database that for which Flask has a great extension for communication between the back end application and the database.  </p>
             <h3>Python 3 (https://www.python.org/)</h3>
             <p>Python is an easy to learn programming language that is one of the most popular and in demand programming languages.  </p>
+            <h2>Front End</h2>
+            <p class="draft_content">Found some stuff that will be useful for the front end while researching the maps API.</p>
+            <p class="draft_content">(https://developers.google.com/maps/documentation/ios-sdk/cloud-setup) We would need an account with google cloud to anable billing for the use of maps above a certain usage. </p>
         </div>
     </div>
 
@@ -236,6 +240,8 @@
             <h1>Risks</h1>
             <h2>Cost Overun</h2>
             <h2>Security</h2>
+            <h3>API Key Storage</h3>
+            <p>As the project relies on a number of external services such as Google Maps, we must take steps to keep our API keys safe.  An API key released into the wild could result in huge costs if not detected early or if measures arent taken to restrict the usage of the key.  (https://ozguralp.medium.com/unauthorized-google-maps-api-key-usage-cases-and-why-you-need-to-care-1ccb28bf21e).  Secret stores should be utilised to prevent any API keys being required to be embedded in code directly, and git Pre-Commit hooks should be utilised to prevent inadvertent publishing of secrets to repositories.</p>
             <h2>Complexity</h2>
             <h2>Legality</h2>
             <h2>Similar products in the market</h2>
