@@ -84,6 +84,8 @@
             <p>In the initial prototype phase of the product we aim to deliver a small mockup based on static data showing the locations of a number of venues with a brief description.  This will help us to decide what important bits of data we can safely display on a mobile device without the screen becoming cluttered.</p>
             <p>Post Prototype and for phase 1 we aim to integrate this with data supplied from our backend database.  This information will be fetched by the relevant front end application using our API and then displayed on the device.  As Google Maps supports a JSON input, this is what our API will provide.  It is intended that the front end will provide the location of the map view, this will be passed to the database query which will return a dataset to be formatted into JSON with relevant information for display on the map.</p>
             <p>For the purposes of the demo the API key for google maps has been committed to the public repository.  The mitigation for this risk is to heavily restrict the key in the google cloud console to the HTTP referrer of the site.  While this means that testing may be impacted between individual users, if they need to test on a local machine, they can replace the existing key with a private key of their own and enact their own controls to prevent pushing it to the repository.</p>
+            <h3>Third Party Logins</h3>
+            <p>Third party logins such as Google, Twitter, and Amazon are being implemented so as to allow those who do not wish to sign up via email a way to create an account.</p>
         </div>
     </div>
 
@@ -161,7 +163,8 @@
             <h2>External Sources</h2>
             <h3>Google Maps</h3>
             <p>Google maps is chosen over Apple maps even though initial deployment is planned for an iOS device.  This is because Google maps will provide an API for web based, android based, and iOS based applications which will allow for simplification of the product.</p>
-
+            <h3>Google, Twitter, and Amazon Login API</h3>
+            <p>Logging in through external websites and applications API's is planned for implementation for both convenience and to promote those users who don't wish to use their email for signup an alternative way to create an account.</p>
         </div>
     </div>
 
