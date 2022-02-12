@@ -64,7 +64,7 @@ function initMap() {
     // we retrieve the marker's position using the
     // google.maps.LatLng.getPosition() method.
     const infowindow = new google.maps.InfoWindow({
-        content: "<p>Belgian Beer Cafe</p><p>Avg score: 42</p>",
+        content: '<b>Another Beer place</b><tbody><tr><td style="text-align: right">Uniqueness</td><td style="text-align: center">66%</td></tr><tr><td style="text-align: right">Taps</td><td style="text-align: center; column-width: 80px">3</td></tr> <tr><td style="text-align: right">Pint Price</td><td style="text-align: center">💲</td></tr><tr><td style="text-align: right">Atmosphere</td><td  style="text-align: center">🥱</td></tr></tbody></table>',
     });
 
     google.maps.event.addListener(marker, "click", () => {
@@ -86,7 +86,7 @@ function initMap() {
     // we retrieve the marker's position using the
     // google.maps.LatLng.getPosition() method.
     const infowindowa = new google.maps.InfoWindow({
-        content: "<b>Some Beer place</b><p>Avg score: 42</p>",
+        content: '<b>Some Beer place</b><tbody><tr><td style="text-align: right">Uniqueness</td><td style="text-align: center">20%</td></tr><tr><td style="text-align: right">Taps</td><td style="text-align: center; column-width: 80px">5</td></tr> <tr><td style="text-align: right">Pint Price</td><td style="text-align: center">💲💲</td></tr><tr><td style="text-align: right">Atmosphere</td><td  style="text-align: center">😀</td></tr></tbody></table>',
     });
 
     google.maps.event.addListener(markera, "click", () => {
