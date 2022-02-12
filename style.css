@@ -403,6 +403,7 @@ p.note {
 
 
 }
+
 #timeline_table > tbody > tr.table_divide {
     border-bottom: 3px solid;
     border-bottom-color: red;
@@ -420,3 +421,17 @@ p.note {
 }
 
 #timeline_table > tbody > tr > td {}
+
+#map {
+    height: 422px;
+    width: 195px;
+    border-width: 2px;
+    border: solid;
+    margin: auto;
+    
+
+}
+
+#map_outer {
+    margin:auto;
+}
