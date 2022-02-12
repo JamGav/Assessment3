@@ -89,11 +89,20 @@
             <p>For the purposes of the demo the API key for google maps has been committed to the public repository.  The mitigation for this risk is to heavily restrict the key in the google cloud console to the HTTP referrer of the site.  While this means that testing may be impacted between individual users, if they need to test on a local machine, they can replace the existing key with a private key of their own and enact their own controls to prevent pushing it to the repository.</p>
             <p>A demonstration of the Map formatted as it would display on a mobile screen is provided.</p>
             <div id="map_outer">
-                <div id="map"></div>
+                <div id="map">
+<!--                    This probably isnt strictly need in this spot, but it improves the readability when editing the source-->
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoPqle9nsx3uawaEayxKbY3UHc3UmNDJY&callback=initMap&v=weekly" async></script>
+                </div>
             </div>
-
+            <h3>Hosting</h3>
+            <p>For initial testing to reduce costs we have opted for a local machine to host the application data and to deliver the content.  The "Box under the desk" approach.  A Virtual Private Server arrangement was investigated, but after comparing costs it decided that a migration to an off premise solution would only be appropriate after the completion of the closed alpha testing phase.</p>
+            <p>Once the decision is made to move to the open beta stage of development, the application data, contant, and code, will be moved to a cloud hosting provider such as google.  As our development will be completely containerised, it will be a trivial matter to migrate the entire project to a cloud hosting provider that best suits our needs.</p>
+            <p>In Summary the application will first be developed on local machines, then hosted in house for rapid testing of deployment pipelines and to reduce costs, then moved to a cloud hosted solution.  This will all be based upon certain milestones beign reached within the project.</p>
+            <div class="image_box">
+                <img src="img/host_plan.png">
+            </div>
     
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoPqle9nsx3uawaEayxKbY3UHc3UmNDJY&callback=initMap&v=weekly" async></script>
+    
             <h3>Third Party Logins</h3>
             <p>Third party logins such as Google, Twitter, and Amazon are being implemented so as to allow those who do not wish to sign up via email a way to create an account.</p>
             <h2>User Experience and User Interface</h2>
