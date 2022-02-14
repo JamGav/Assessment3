@@ -64,7 +64,7 @@ function initMap() {
     // we retrieve the marker's position using the
     // google.maps.LatLng.getPosition() method.
     const infowindow = new google.maps.InfoWindow({
-        content: '<b>Another Beer place</b><br><p>Uniqueness: 66%</p><br><p>Taps: 3</p><br><p>Pint Price:💲</p><br><p>Atmosphere: 🥱</p>',
+        content: '<b>Another Beer place</b><p>Uniqueness: 66%</p><p>Taps: 3</p><p>Pint Price:💲</p><p>Atmosphere: 🥱</p>',
     });
 
     google.maps.event.addListener(marker, "click", () => {
@@ -86,7 +86,7 @@ function initMap() {
     // we retrieve the marker's position using the
     // google.maps.LatLng.getPosition() method.
     const infowindowa = new google.maps.InfoWindow({
-        content: '<b>Another Beer place</b><br><p>Uniqueness: 20%</p><br><p>Taps: 5</p><br><p>Pint Price: 💲💲</p><br><p>Atmosphere: 😀</p>',
+        content: '<b>Another Beer place</b><p>Uniqueness: 20%</p><p>Taps: 5</p><p>Pint Price: 💲💲</p><p>Atmosphere: 😀</p>',
     });
 
     google.maps.event.addListener(markera, "click", () => {
