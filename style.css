@@ -417,7 +417,7 @@ p.note {
 }
 
 #timeline_table > tbody > tr.alt_row > td {
-    background: gray;
+    background: LightGray;
     padding: 0;
     margin: 0;
 
