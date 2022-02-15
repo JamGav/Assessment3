@@ -542,6 +542,7 @@
             <span class="go_to_top"><a href="#top">↸ Back to top</a></span>
             <h1>Risks</h1>
             <h2>Cost Overun</h2>
+            <p>Controlling costs in initial phases will allow us to commit more time to development activities.  One key expense point for a small organisation could be cloud fees.  These can be eliminated completely until they become a necessity. Utilising clever development of microservices on local machines before migrating the system to an IaaS provider will allow us to control costs significantly.</p>
             <h2>Security</h2>
             <h3>API Key Storage</h3>
             <p>As the project relies on a number of external services such as Google Maps, we must take steps to keep our API keys safe.  An API key released into the wild could result in huge costs if not detected early or if measures arent taken to restrict the usage of the key.  (https://ozguralp.medium.com/unauthorized-google-maps-api-key-usage-cases-and-why-you-need-to-care-1ccb28bf21e).  Secret stores should be utilised to prevent any API keys being required to be embedded in code directly, and git Pre-Commit hooks should be utilised to prevent inadvertent publishing of secrets to repositories.</p>
