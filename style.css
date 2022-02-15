@@ -384,6 +384,8 @@ p.note {
 #timeline_table {
     border: 2px solid;
     margin: auto;
+    width: auto;
+    border-collapse: collapse;
 }
 
 #timeline_table > tbody .week_field {
@@ -397,9 +399,12 @@ p.note {
 
 #timeline_table > tbody > tr.alt_row {
     background: gray;
+/*
     border-left-color: gray;
     border-right-color: gray;
-    border: 1px solid;
+*/
+    border-collapse: collapse;
+/*    border: 1px solid;*/
 
 
 }
