@@ -36,7 +36,7 @@
             <li><a href="#Timeframe">Timeframe</a></li>
             <li><a href="#Risks">Risks</a></li>
             <li><a href="#Group processes and communications">Group processes and communications</a></li>
-            
+
         </ul>
 
     <div class="main_content_area">
@@ -84,7 +84,7 @@
             <h3>Google Maps Technology</h3>
             <p>Google Maps is the preferred map application to use for this product.</p>
             <p>Google maps is chosen as it is the most widely supported across multiple platforms and most users will be familiar with its look and feel.</p>
-            
+
             <p>In the initial prototype phase of the product we aim to deliver a small mockup based on static data showing the locations of a number of venues with a brief description.  This will help us to decide what important bits of data we can safely display on a mobile device without the screen becoming cluttered.</p>
             <p>Post Prototype and for phase 1 we aim to integrate this with data supplied from our backend database.  This information will be fetched by the relevant front end application using our API and then displayed on the device.  As Google Maps supports a JSON input, this is what our API will provide.  It is intended that the front end will provide the location of the map view, this will be passed to the database query which will return a dataset to be formatted into JSON with relevant information for display on the map.</p>
             <p>For the purposes of the demo the API key for google maps has been committed to the public repository.  The mitigation for this risk is to heavily restrict the key in the google cloud console to the HTTP referrer of the site.  While this means that testing may be impacted between individual users, if they need to test on a local machine, they can replace the existing key with a private key of their own and enact their own controls to prevent pushing it to the repository.</p>
@@ -103,10 +103,12 @@
             <div class="image_box">
                 <img src="img/host_plan.png">
             </div>
-    
-    
-            <h3>Third Party Logins</h3>
-            <p>Third party logins such as Google, Twitter, and Amazon are being implemented so as to allow those who do not wish to sign up via email a way to create an account.</p>
+            <h3>Third Party Logins Through OpenAuthorization</h3>
+            <p>Third party logins such as Google, Twitter, and Facebook are being implemented using OpenAuthorization so as to allow those who do not wish to sign up via email a way to create an account.</p>
+            <h3>Account Data Storage</h3>
+            <p>Account details such as the users ID, OpenAuthorization ID, date of account creation, email used in signup, and hashed passwords (when applicable) will be kept in our database as per below.</p>
+            <center><img src="img/dbmockups/accdatamockup.png"></center>
+
             <h2>User Experience and User Interface</h2>
             <p>UX (User experience design) and UI (User interface design) are two terms often used interchangeably and although the two are closely linked with some overlap, they are separate areas that have differences in goals and approach.</p>
             <p>UX focuses on a user's journey through a product or application whereas UI focus on the aesthetics and visual elements of an application. The goal of a UX designer is to create an easy, efficient, relevant, and all-round pleasant experiences for the user (https://careerfoundry.com/en/blog/ux-design/the-difference-between-ux-and-ui-design-a-laymans-guide/). UI designers work with the wireframe or structure provided by the UX designer and create a visually appealing easy to understand interface (https://youtu.be/5CxXhyhT6Fc). </p>
@@ -208,16 +210,14 @@
             <p>PostgreSQL is an open source database, with which Flask has a great extension for communication between the back-end application and the database.  </p>
             <h3>Python 3 (https://www.python.org/)</h3>
             <p>Python is an easy to learn programming language that is one of the most popular and in demand programming languages.  </p>
-            <h3>Argon 2 (https://github.com/p-h-c/phc-winner-argon2)</h3>
-            <p>Argon 2 is a password hashing algorithm that we intend to use to store users passwords in our database, it is considered to be extremely secure as well as resistant to brute force attacks.</p>
+            <h3>OAuth 2.0</h3>
+            <p>OAuth 2.0 is used to login and create accounts with our service using external websites such as Google, Twitter, and Facebook.</p>
             <h2>Front End</h2>
             <p class="draft_content">Found some stuff that will be useful for the front end while researching the maps API.</p>
             <p class="draft_content">(https://developers.google.com/maps/documentation/ios-sdk/cloud-setup) We would need an account with google cloud to anable billing for the use of maps above a certain usage. </p>
             <h2>External Sources</h2>
             <h3>Google Maps</h3>
             <p>Google maps is chosen over Apple maps even though initial deployment is planned for an iOS device.  This is because Google maps will provide an API for web based, android based, and iOS based applications which will allow for simplification of the product.</p>
-            <h3>Google, Twitter, and Amazon Login API</h3>
-            <p>Logging in through external websites and applications API's is planned for implementation for both convenience and to promote those users who don't wish to use their email for signup an alternative way to create an account.</p>    
             <h2>UI/UX</h2>
             <P>Development of the Apps UI and UX was Rory's Role. He has had design experience but has had no experience working with UI and UX development tools. After Research he settled on developing a prototype using Adobe XD. This was chosen due to its integration with the Adobe Creative Cloud Suite, which was already being used to develop design assets for the project. These Creative Cloud apps all required licensing through Adobe. The specific apps used where:<ul>
                 <li>Adobe XD (Version 47.0.22)</li>
@@ -385,7 +385,7 @@
                     </td>
                     <td class="timeframe_data timeframe_gav">
                     <ul>
-                        <li>Refine map design elements</li>    
+                        <li>Refine map design elements</li>
                     </ul>
                     </td>
                     <td></td>
@@ -402,9 +402,9 @@
                     <td class="timeframe_data timeframe_gav">
                         <ul>
                             <li>Develop a plan for the core API for communication with the front end</li>
-                            
+
                         </ul>
-                    
+
                     </td>
                     <td></td>
                     <td><ul>
@@ -512,7 +512,7 @@
                         <ul>
                             <li>Collation of Closed Alpha feedback</li>
                         </ul>
-                    
+
                     </td>
                     <td></td>
                     <td><ul>
@@ -601,7 +601,7 @@ The second action being the implementation of password <a href="https://docs.ora
             <p>If a group member is unable to attend a meeting they respond to the invitation or Teams Discussion with a reason ahead of the meeting. The meetings, Agenda Items and Actions are recorded from these sessions, so members are still able to track progress and continue developing.</p>
             <p>Teams also support asynchronous communications though channel posts, allowing users to post a new discussion items, or comment on an existing discussions as they can.</p>
             <p>Other tools built into Teams, such as SharePoint and lists are also used regularly to support collaborative work and organization.</p>
-            
+
 
             <h2>GitHub</h2>
             <p>GitHub is another tool that we use as part of our process. We use GitHub as the repository as we develop our application. It allows multiple users to work together and build on the work of others. We also make use of the Summary, Description, and comment features on commits to provide further insight to other team members work.</p>
@@ -611,7 +611,7 @@ The second action being the implementation of password <a href="https://docs.ora
             <p>All official communication is contained through these applications, but other communication platforms, such as Facebook messenger and Discord are used for more casual check-ins and to chase members if they are running late to a meeting.</p>
         </div>
     </div>
-    
+
 
 </body>
 </html>
