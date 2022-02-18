@@ -644,6 +644,7 @@
             <h1>Risks</h1>
             <h2>Cost Overrun</h2>
             <p>Controlling costs in initial phases will allow us to commit more time to development activities. One key expense point for a small organisation could be cloud fees. These can be eliminated completely until they become a necessity. Utilising clever development of microservices on local machines before migrating the system to an IaaS provider will allow us to control costs significantly.</p>
+            
             <h2>Security</h2>
             <h3>API Key Storage</h3>
             <p>As the project relies on a number of external services such as Google Maps, we must take steps to keep our API keys safe.  An API key released into the wild could result in huge costs if not detected early or if measures arent taken to restrict the usage of the key (<a href="https://ozguralp.medium.com/unauthorized-google-maps-api-key-usage-cases-and-why-you-need-to-care-1ccb28bf21e">Unauthorized Google Maps API Key Usage Cases, and Why You Need to Care</a>).  Secret stores should be utilised to prevent any API keys being required to be embedded in code directly, and git pre-commit hooks should be utilised to prevent inadvertent publishing of secrets to repositories.</p>
@@ -653,6 +654,13 @@
 
             <h2>Complexity</h2>
             <p>Controlling complexity will be important.  An overly complicated system will drive up costs by increasing security risk factors, development time, and technical debt. We aim to control complexity by limiting development to small achievable goals and limiting as much scope creep as possible. It may be prudent in some cases to extend development time to ensure that shortcuts are not taken that will lead to an increase in complexity of the system.</p>
+           
+            <h2>Poor User Adoption</h2>
+            <p>An app without users cannot be successful and this is particularly true for an app that’s core functionality is built on user contributions. To mitigate this issue initial data seeding will be outsourced to a market research firm to have user generated content available from launch day. Additionally, the UI and UX team has scheduled time to work on Branding and marketing material for the beta launch, which although it isn’t in their traditional scope, is assigned to them due to our small organization size.</p>
+
+            <h2>Designing unnecessary features</h2>
+            <p>A major step in the UX development timeline that was skipped in this project is Research and Understanding the intended audience. Although we created a user profile of our intended audience, we were unable to perform in-depth analysis and traditional market research into this group, due to limited online research and no budget to conduct research. Planned features such as the social expansion may not be of interest to our users and would be a significant waste of development resources. This issue is hard to mitigate pre-launch, but after an initial user base is established listening to feedback and actively pursuing it with questionnaires would help. </p>
+
             <h2>Ethical Risks</h2>
             <p>The Pursuit of Hoppiness is constructed as a social and fun community review app, however the app's focus around the consumption of alcohol introduces two ethical considerations when discussing the user base.</p>
             <h3>Age Limit</h3>
