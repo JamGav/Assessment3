@@ -109,7 +109,28 @@
             <h3>Account Data Storage</h3>
             <p>Account details such as the users ID, OpenAuthorization ID, date of account creation, email used in signup, and hashed passwords (when applicable) will be kept in our database as per below.</p>
             <center><img src="img/dbmockups/accdatamockup.png"></center>
-
+            <h2>General Database Plans</h2>
+            <p>User data is, of course, not the only type of data that needs storing. On the app's server-side, we would need to be able to store multiple datapoints across several different areas in order to provide the users with all of the relevant information to let the app even function at all.</p>
+            <h3>Initial Research</h3>
+            <p>The first stage of the process was to identify the key areas that would require databasing in the first place. This is a step that necessarily gets pushed towards the later stages of development a little, as it is much easier to fit a database around a properly solidified application framework than it is for one to find themselves needing to expand or completely refactor the database in response to changing requirements.</p>
+            <p>The earliest identified points of interest were:</p>
+            <ul>
+                <li>User Accounts</li>
+                <li>Venue Information</li>
+                <li>User-submitted data (such as reviews)</li>
+            </ul>
+            <p>These areas were also partially determined by further research into database creation and management. Similar projects were found to use a table for the basic user information, one for each venue's information, and then a network of multiple tables tied into these to store information about comments, tags, likes, and so on.</p>
+            <h3>Database Structure</h3>
+            <p>At its core, the database is a linked series of tables, each with referenced entries. For example, the user information table contains each user's unique ID - this is a string generated newly for each account upon creation and remains tied to it everywhere else in the application.</p>
+            <div class="image_box">
+                <img src="img/dbmockups/userinfomockup.png"></center>
+            </div>
+            <p>It then also holds smaller pieces of data that the user can submit on their profile page. This is things like a display username, possibly their set location (which the mapping function could then use if the user doesn't have location data turned on), small text fields with their interests, or an "about me" section, and so on.</p>
+            <p>It is a similar story when it comes to the venue information, albeit with more detailed extra columns:</p>
+            <div class="image_box">
+                <img src="img/dbmockups/venueinfomockup.png">
+            </div>
+            <p>Once again, each venue has a uniquely-generated ID.</p>
             <h2>User Experience and User Interface</h2>
             <p>UX (User experience design) and UI (User interface design) are two terms often used interchangeably and although the two are closely linked with some overlap, they are separate areas that have differences in goals and approach.</p>
             <p>UX focuses on a user's journey through a product or application whereas UI focus on the aesthetics and visual elements of an application. The goal of a UX designer is to create an easy, efficient, relevant, and all-round pleasant experiences for the user (https://careerfoundry.com/en/blog/ux-design/the-difference-between-ux-and-ui-design-a-laymans-guide/). UI designers work with the wireframe or structure provided by the UX designer and create a visually appealing easy to understand interface (https://youtu.be/5CxXhyhT6Fc). </p>
