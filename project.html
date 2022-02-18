@@ -81,9 +81,9 @@
         <div id="Plans and Progress" class="tech_content_card">
             <span class="go_to_top"><a href="#top">↸ Back to top</a></span>
             <h1>Plans and Progress</h1>
-            <h3>Initial Data Seeding</h3>
+            <h2>Initial Data Seeding</h2>
             <p>As the project's Phase 1 aim is limited to the Perth area, we must be able to provide data to the users to kickstart organic growth. Initially it was thought that web information could be scraped from a source like Google Maps, but this prompted some ethical considerations once it was realised that the same thing could happen with the data that we are holding. Consideration is given to budget when deciding how best to collect this data. Pursuit of Hoppiness is a small operation and can ill afford to send its staff out on beer hunting missions during the limited available time to produce a proof of concept product. A number of market research companies exist within the Perth area that support the hospitality sector. This work could be outsourced to a market researcher and then ingested into the database to provide a starting point for users.</p>
-            <h3>Google Maps Technology</h3>
+            <h2>Google Maps Technology</h2>
             <p>Google Maps is the preferred map application to use for this product.</p>
             <p>Google Maps is chosen as it is the most widely-supported across multiple platforms and most users will be familiar with its look and feel.</p>
 
@@ -98,19 +98,19 @@
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoPqle9nsx3uawaEayxKbY3UHc3UmNDJY&callback=initMap&v=weekly" async></script>
                 </div>
             </div>
-            <h3>Hosting</h3>
+            <h2>Hosting</h2>
             <p>For initial testing to reduce costs we have opted for a local machine to host the application data and to deliver the content, the "box under the desk" approach.  A Virtual Private Server arrangement was investigated, but after comparing costs it was decided that a migration to an off-premises solution would only be appropriate after the completion of the closed alpha testing phase.</p>
             <p>Once the decision is made to move to the open beta stage of development, the application data, content, and code will be moved to a cloud hosting provider such as Google. As our development will be completely containerised, it will be a trivial matter to migrate the entire project to a cloud hosting provider that best suits our needs.</p>
             <p>In summary, the application will first be developed on local machines, then hosted in-house for rapid testing of deployment pipelines and to reduce costs, then moved to a cloud hosted solution. This will all be based upon certain milestones being reached within the project.</p>
             <div class="image_box">
                 <img src="img/host_plan.png">
             </div>
-            <h3>OpenAuthorization & Logins</h3>
+            <h2>OpenAuthorization & Logins</h2>
             <p>When creating an account with our service, we decided we would implement OpenAuthorization so as allow users to join the site through existing accounts such as Google, Facebook and Twitter. Users are also offered the choice to join our application via the standard procedure of creating an account through email and password.</p>
             <p>(Refer to UX Prototype below)</p>
-            <h3>Account Data Storage</h3>
+            <h2>Account Data Storage</h2>
             <p>Account details such as the user's ID, OpenAuthorization ID, date of account creation, email used in signup, and hashed passwords (when applicable) will be kept in our database as per below.</p>
-            <center><img src="img/dbmockups/accdatamockup.png"></center>
+            <center><img src="img/dbmockups/accdatamockup.PNG"></center>
             <h2>General Database Plans</h2>
             <p>User data is, of course, not the only type of data that needs storing. On the app's server side, we would need to be able to store multiple datapoints across several different areas in order to provide the users with all of the relevant information to let the app even function at all.</p>
             <h3>Initial Research</h3>
