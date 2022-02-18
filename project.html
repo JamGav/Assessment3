@@ -130,7 +130,18 @@
             <div class="image_box">
                 <img src="img/dbmockups/venueinfomockup.png">
             </div>
-            <p>Once again, each venue has a uniquely-generated ID.</p>
+            <p>Once again, each venue has a uniquely-generated ID. After that, this table can store the various set-in-stone elements of each venue - their contact information, socials, location, opening hours, and a short summary (possibly pulled from Google Maps API or user-submitted/reviewed).</p>
+            <p>Anytime something in the app needs to display relevant information about either users or venues, it sends a quick lookup request through to the database, uses the ID of the item to find it in the table, and then pulls out whichever datapoint is needed to display.</p>
+            <p>When an table item's ID is used like this, it's known as a <b>Primary Key</b>. The primary key is what keeps that particular entry identified as a point on that particular table. This then feeds forward into how things like reviews and comments can be stored.</p>
+            <div class="image_box">
+                <img src="img/dbmockups/reviewsmockup.png">
+            </div>
+            <p>This is how a table of user reviews would then look. Instead of its own generated ID as a primary key, a review uses a linked pair of the user ID <i>leaving</i> the review, and the venue ID that's <i>receiving</i> the review. These are known as "foreign keys" (as they are taken from a different table's primary keys), and the result is called a <b>Composite Primary Key</b>. The two immediate benefits to the Composite Primary Key system are firstly that having a user or venue ID as part of each CPK means that any other place using those IDs (such as a user or venue profile) can then display all reviews containing the relevant key, so visiting a user's profile can show all the reviews they have left, for example.</p>
+            <p>The second benefit is that each user/venue ID pair is treated as a unique key that can only exist in a single instance. Both to streamline the app and prevent "review bombing", a user cannot review a venue multiple times, only edit their previous review. This review entry in the table stores the various components, being the 5 categories as well as a text summary, and again is called by simple lookup requests.</p>
+            <div class="image_box">
+                <img src="img/dbmockups/commentsmockup.png">
+            </div>
+            <p>The last example here is how a table would look for comments, or any similar "repeatable" entity that - unlike a review - may be left multiple times by a single user.</p>
             <h2>User Experience and User Interface</h2>
             <p>UX (User experience design) and UI (User interface design) are two terms often used interchangeably and although the two are closely linked with some overlap, they are separate areas that have differences in goals and approach.</p>
             <p>UX focuses on a user's journey through a product or application whereas UI focus on the aesthetics and visual elements of an application. The goal of a UX designer is to create an easy, efficient, relevant, and all-round pleasant experiences for the user (https://careerfoundry.com/en/blog/ux-design/the-difference-between-ux-and-ui-design-a-laymans-guide/). UI designers work with the wireframe or structure provided by the UX designer and create a visually appealing easy to understand interface (https://youtu.be/5CxXhyhT6Fc). </p>
