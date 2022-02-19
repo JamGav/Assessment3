@@ -147,7 +147,11 @@
             <p>When creating an account with our service, we decided we would implement OpenAuthorization so as allow users to join the site through existing accounts such as Google, Facebook and Twitter. Users are also offered the choice to join our application via the standard procedure of creating an account through email and password.</p>
             <p>(Refer to UX Prototype below)</p>
             <h2>Account Data Storage</h2>
-            <p>Account details such as the user's ID, OpenAuthorization ID, date of account creation, email used in signup, and hashed passwords (when applicable) will be kept in our database as per below.</p>
+            <h3>OpenAuthorization Storage</h3>
+            <p>When creating an account with our service using a third-party application and OpenAuthorization protocol, the third-party service that they sign up with (e.g. Google) will supply OpenAuthorization with an ID that which will be used to identify them via binding that OpenAuthorization ID to a user ID provided with our service.</p>
+            <h3>Email and Password Account Storage</h3>
+            <p>Users that which sign up with the standard account creation method of email and password will have their account's user ID attached to their email. Their hashed passwords will be stored alongside this information.</p>
+            <p>Both OpenAuthorization and regular sign ups will have their accounts creation date stored.</p>
             <center><img src="img/dbmockups/accdatamockup.PNG"></center>
             <h2>General Database Plans</h2>
             <p>User data is, of course, not the only type of data that needs storing. On the app's server side, we would need to be able to store multiple datapoints across several different areas in order to provide the users with all of the relevant information to let the app even function at all.</p>
@@ -292,7 +296,7 @@
             <p>Gavin has had some experience using the Google Maps API in the past for small projects that needed to be both interactive and update dynamically.</p>
             <p>Google Maps is chosen over Apple Maps even though initial deployment is planned for an iOS device.  This is because Google Maps will provide an API for web-based, Android-based, and iOS-based applications which will allow for simplification of the product.</p>
             <h3>OpenAuthorization 2.0</h3>
-            <p>OpenAuthorization's API was used to enable users to loging through existing third-party services such as Google, Twitter, and Facebook.</p>
+            <p>OpenAuthorization's API was used to enable users to login through existing third-party services such as Google, Twitter, and Facebook.</p>
             <h2>UI/UX</h2>
             <P>Development of the app's UI and UX was Rory's role. He has had design experience but has had no experience working with UI and UX development tools. After research, he settled on developing a prototype using Adobe XD. This was chosen due to its integration with the Adobe Creative Cloud Suite, which was already being used to develop design assets for the project. These Creative Cloud apps all required licensing through Adobe. The specific apps used were:<ul>
                 <li>Adobe XD (Version 47.0.22)</li>
