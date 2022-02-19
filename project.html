@@ -98,7 +98,7 @@
             <h3>Selection</h3>
             <p>Google Maps is the preferred map application to use for this product.  Google Maps is chosen as it is the most widely-supported across multiple platforms and most users will be familiar with its look and feel.  It is important that we create a common feel for Pursuit of Hoppiness across all platforms.</p>
             <h3>Other considered options</h3>
-            <p>Alternative map products such as Apple Maps and Bing maps were considered however they were discounted fairly early on.  This was largely due to the requirement to reduce the need for different streams of development.  As Google maps can be deployed with a similar look and feel across a variety of platforms, selecting Google Maps allows us to focus development in one area.  As google maps is the most popular navigation app(https://www.statista.com/statistics/865413/most-popular-us-mapping-apps-ranked-by-audience/), developers in the mobile space are also more likely to be familiar with the API.</p>
+            <p>Alternative map products such as Apple Maps and Bing maps were considered however they were discounted fairly early on.  This was largely due to the requirement to reduce the need for different streams of development.  As Google maps can be deployed with a similar look and feel across a variety of platforms, selecting Google Maps allows us to focus development in one area.  As google maps is the most popular navigation app(Ceci, 2022), developers in the mobile space are also more likely to be familiar with the API.</p>
             <h3>Prototyping</h3>
             <p>In the initial prototype phase of the product we aim to deliver a small mockup based on static data showing the locations of a number of venues with a brief description. This will help us to decide what important bits of data we can safely display on a mobile device without the screen becoming cluttered.</p>
             <p>For the purposes of the demo, the API key for Google Maps has been committed to the public repository. The mitigation for this risk is to heavily restrict the key in the Google Cloud Console to the HTTP referrer of the site.  While this means that testing may be impacted between individual users, if they need to test on a local machine, they can replace the existing key with a private key of their own and enact their own controls to prevent pushing it to the repository.</p>
@@ -134,7 +134,7 @@
             <p>For initial testing to reduce costs we have opted for a local machine to host the application data and to deliver the content, the "box under the desk" approach.  A Virtual Private Server arrangement was investigated, but after comparing costs it was decided that a migration to an off-premises solution would only be appropriate after the completion of the closed alpha testing phase.</p>
             <p>Once the decision is made to move to the open beta stage of development, the application data, content, and code will be moved to a cloud hosting provider such as Google. As our development will be completely containerised, it will be a trivial matter to migrate the entire project to a cloud hosting provider that best suits our needs.</p>
             <h3>Selection of a Cloud Service Provider</h3>
-            <p>A variety of providers were investigated as were a number of ways of hosting it.  Between Platform as a Service and Infrastructure as a Service architecture it makes sense for us to adopt an IaaS setup as this will reduce our need to manage the operating system and instead focus on upkeep of the application and software supporting the application.</p>
+            <p>A variety of providers were investigated as were a number of ways of hosting Pursuit of Hoppiness.  Between Platform as a Service and Infrastructure as a Service architecture it makes sense for us to adopt an IaaS setup as this will reduce our need to manage the operating system and instead focus on upkeep of the application and software supporting the application.</p>
             <p>Google, Amazon, and Microsoft are the big names in this space all offering a product that meets our needs.  They all also provide data centres located in Australia providing low latency times nationwide.  Due to us already adopting Google maps as a service within Pursuit of Hoppiness, Google is a likely frontrunner for selection as it will allow us to keep all billing in one place and reduce complexity.  While we must remain focussed on cost control it may be worth paying a small premium to reduce complexity and risk rather then increasing both to save a small amount.</p>
             <h3>Cloud migration</h3>
             <p>Our cloud migration signals a significant milestone for Pursuit of Hoppiness.  This allows us to extend our reach and further reduce the risk of an outage affecting our users.  Cloud migration is expected to be a quick process with the entire application and database being migrated over the course of a single day with minimum outage.</p>
@@ -232,6 +232,7 @@
             <p>Gjorgievska, L., 2021. Australian Beer Market Statistics That Raise the Bar. [online] Take a Tumble. Available at: <https://takeatumble.com.au/insights/lifestyle/beer-market-statistics/> [Accessed 2 February 2022]. </p>
             <p>Lamprecht, E., 2022. UX vs. UI Design: What's the Difference? [2022 Guide]. [online] CareerFoundry. Available at: <https://careerfoundry.com/en/blog/ux-design/the-difference-between-ux-and-ui-design-a-laymans-guide/> [Accessed 1 February 2022]. </p>
             <p>Siang, T., 2021. 7 UX Deliverables: What will I be making as a UX designer?. [online] The Interaction Design Foundation. Available at: <https://www.interaction-design.org/literature/article/7-ux-deliverables-what-will-i-be-making-as-a-ux-designer> [Accessed 3 February 2022]. </p>
+            <p>Ceci, L., 2022. Top U.S. mapping apps by downloads 2021 | Statista. [online] Statista. Available at: https://www.statista.com/statistics/865413/most-popular-us-mapping-apps-ranked-by-audience/ [Accessed 19 February 2022].</p>
         </div>
     </div>
 
@@ -287,32 +288,8 @@
         <div id="Tools and Technologies" class="tech_content_card">
             <span class="go_to_top"><a href="#top">↸ Back to top</a></span>
             <h1>Tools and Technologies</h1>
-            <h2>Backend</h2>
-            <p class="draft_content">The assignment brief said that a description is not needed.  I feel a very small description better justifies the decisions. I'll include a statement about the latest versions available at the start of development.</p>
-            <p>Early planning of the stucture of the back end is crucial to the applications initial deployment and future success. The SAS refers to it as the Seven Ps —Prior Planning and Preparation Prevents Piss Poor Performance - but in the tech industry it it is often called technical debt. Decisions made in the early stages of development must be sound for the future of the product, however they must also be traded off against cost and expediency.</p>
-            <p>As one major aim of the application is to have it scalable as demand and geographical footprint increases, we must aim to use technologies that will facilitate this.</p>
-            <p>As a low cost start up, we must also aim to control costs at every turn. To accompish this, where possible, free open-source software (FOSS) will be utilised. Fortunately a lot of FOSS has become the industry standard for operations like this.</p>
-            <h3>Ubuntu (https://ubuntu.com/)</h3>
-            <p>Ubuntu Linux is a widely supported and easy-to-learn linux distribution. The latest versions are also supplied as a docker image.</p>
-            <h3>Docker (https://www.docker.com/)</h3>
-            <p>Docker is used to create not just individual virtual environments, but entire systems. It runs on a variety of platforms and is very well supported across all cloud providers.</p>
-            <h3>NGINX (https://www.nginx.com/)</h3>
-            <p>NGINX will be used to direct requests to different docker containers based on the current requirements</p>
-            <h3>gUNICORN (https://gunicorn.org/)</h3>
-            <p>gUNICORN will be the production server for the main back end application built on Flask.</p>
-            <h3>Flask (https://flask.palletsprojects.com/en/2.0.x/)</h3>
-            <p>Flask is a Python module that allows for back-end web scripting in Python. Flask can be used to create REST APIs. As the application must be available on a variety of platforms(iOS, Android, W3), the intention is to develop the backend to communicate almost exclusively with the outside world through a REST API.</p>
-            <h3>PostgreSQL (https://www.postgresql.org/)</h3>
-            <p>PostgreSQL is an open source database, with which Flask has a great extension for communication between the back-end application and the database.  </p>
-            <h3>Python 3 (https://www.python.org/)</h3>
-            <p>Python is an easy to learn programming language that is one of the most popular and in demand programming languages.  </p>
-            <h3>OAuth 2.0</h3>
-            <p>OAuth 2.0 is used to login and create accounts with our service using external websites such as Google, Twitter, and Facebook.</p>
-            <h2>Frontend</h2>
-            <p class="draft_content">Found some stuff that will be useful for the front end while researching the maps API.</p>
-            <p class="draft_content">(https://developers.google.com/maps/documentation/ios-sdk/cloud-setup) We would need an account with google cloud to anable billing for the use of maps above a certain usage. </p>
-            <h2>External Sources</h2>
             <h3>Google Maps</h3>
+            <p>Gavin has had some experience using the Google Maps API in the past for small projects that needed to be both interactive and update dynamically.</p>
             <p>Google Maps is chosen over Apple Maps even though initial deployment is planned for an iOS device.  This is because Google Maps will provide an API for web-based, Android-based, and iOS-based applications which will allow for simplification of the product.</p>
             <h2>UI/UX</h2>
             <P>Development of the app's UI and UX was Rory's role. He has had design experience but has had no experience working with UI and UX development tools. After research, he settled on developing a prototype using Adobe XD. This was chosen due to its integration with the Adobe Creative Cloud Suite, which was already being used to develop design assets for the project. These Creative Cloud apps all required licensing through Adobe. The specific apps used were:<ul>
@@ -349,7 +326,8 @@
             <p>Evan's main objectives for the app's development, as the primary database manager, will be to ensure that prior to the initial prototype deadline, at least a rudimentary database must be functional and able to neatly store all required user/venue data. After that, alongside the team's further app development, he will construct out the database to accommodate more varied entities such as comments, and the hosting of chat (if it's to be stored server-side).</p>
 
             <h2>Gavin</h2>
-            <p></p>
+            <p>Gavin will focus on the Maps and coordinating activities between front end and back end development to ensure that they remain efficient and move together with each other.  From this point of view, Gavin will be able to have an overview of pain points being experienced in all areas of the application and direct resources appropriately to deal with them.  For example, when monitoring the closed alpha feedback and planning for the open beta release, a problem reported by a user needs to be accurately triaged and directed to the proper development team for a fix.  A failure to do this may result in the symptoms being treated insterad of the disease.</p>
+            <p>Prior to recruiting a dedicated resource for Quality Assurance, Gavin will be responsibile for interim QA.</p>
 
             <h2>Rory</h2>
             <p>Rory's role in the development of the Pursuit of Hoppiness is the UX and UI designer. He will work towards hitting two primary deadlines, those being an active prototype in week 5 of development and a working app that is fully integrated with other services by week 15.</p>
@@ -697,7 +675,7 @@
             
             <h2>Security</h2>
             <h3>API Key Storage</h3>
-            <p>As the project relies on a number of external services such as Google Maps, we must take steps to keep our API keys safe.  An API key released into the wild could result in huge costs if not detected early or if measures arent taken to restrict the usage of the key (<a href="https://ozguralp.medium.com/unauthorized-google-maps-api-key-usage-cases-and-why-you-need-to-care-1ccb28bf21e">Unauthorized Google Maps API Key Usage Cases, and Why You Need to Care</a>).  Secret stores should be utilised to prevent any API keys being required to be embedded in code directly, and git pre-commit hooks should be utilised to prevent inadvertent publishing of secrets to repositories.</p>
+            <p>As the project relies on a number of external services such as Google Maps, we must take steps to keep our API keys safe.  An API key released into the wild could result in huge costs if not detected early or if measures arent taken to restrict the usage of the key (Alp, 2022).  Secret stores should be utilised to prevent any API keys being required to be embedded in code directly, and git pre-commit hooks should be utilised to prevent inadvertent publishing of secrets to repositories.</p>
             <h3>Password Storage</h3>
             <p>As an account is required to access and use the Pursuit of Hoppiness, there is always the risk of data breaches exposing user’s information to wrongdoers. We plan to combat and prevent this in two ways; the first being that passwords be inherently strong. They must meet the requirement of eight characters in length, while also containing at least one uppercase letter and special character.
             The second action being the implementation of password <a href="https://docs.oracle.com/cd/E26180_01/Platform.94/ATGPersProgGuide/html/s0506passwordhashing01.html" target="_blank">hashing,</a> password hashing being a process in which passwords are transformed (hashed) from their initial states into a new string of letters and numbers. When logging into the website again, the password you enter is then hashed so as to match your intial password, compared to the hashed string in our database, and then approved or denied depending on whether the password is correct or not.</p>
@@ -733,6 +711,7 @@
             <p>IWSR Drinks Market Analysis, 2021. No- and Low-Alcohol Products Gain Share Within Total Beverage Alcohol. [online] Available at: <https://www.theiwsr.com/wp-content/uploads/IWSR_No-and-Low-Alcohol-Gains-Share-Within-Total-Beverage-Alcohol-2021.pdf> [Accessed 12 January 2022]. </p>
             <p>Standing Committee on Social Policy and Legal Affairs, 2019. Inquiry into age verification for online wagering and online pornography. Canberra: Parliament of australia, p.Chaper 2. </p>
             <p>Thomson, J., 2017. The Surprising Truth About Why Alcohol Websites Make You Enter Your Age. [online] HuffPost. Available at: <https://www.huffpost.com/entry/liquor-website-age-verification_n_59c3b549e4b06f93538cdd18/amp?fbclid=IwAR2n_Ua4ppJzEGM3jrviGFRadP4K-1er1EF2Z23NCM4tG2M7umgVz06eO1w> [Accessed 10 January 2022].</p>
+            Alp, O., 2022. Unauthorized Google Maps API Key Usage Cases, and Why You Need to Care. [online] Medium. Available at: https://ozguralp.medium.com/unauthorized-google-maps-api-key-usage-cases-and-why-you-need-to-care-1ccb28bf21e [Accessed 19 February 2022].
         </div>
     </div>
 
@@ -752,12 +731,7 @@
             <p>Other tools built into Teams, such as SharePoint and lists, are also used regularly to support collaborative work and organization.</p>
 
 
-            <h2>GitHub</h2>
-            <p>GitHub is another tool that we use as part of our process. We use GitHub as the repository where we develop our application. It allows multiple users to work together and build on the work of others. We also make use of the summary, description, and comment features on commits to provide further insight to other team members' work.</p>
-            <p>For code storage and development, a GitHub Organization account will be used to store code and manage issues and deployments.  GitHub is chosen over any other self-hosted applications as it offers the most features and most users will be familiar with its use.</p>
-
-            <h2>Other Tools</h2>
-            <p>All official communication is contained through these applications, but other communication platforms, such as Facebook messenger and Discord are used for more casual check-ins and to chase members if they are running late for a meeting.</p>
+            
 
             <h2>Refereneces</h2>
             <p>Alexandra, M., 2016. 6 proven project team communication strategies. [online] CIO. Available at: <https://www.cio.com/article/238521/6-proven-project-team-communication-strategies-2.html> [Accessed 12 January 2022].</p>
