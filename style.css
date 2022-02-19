@@ -70,7 +70,8 @@ div.header {
     margin: auto;
     width: auto;
     text-align: center;
-    background-color: rgb(153, 149, 69);
+/*    background-color: rgb(153, 149, 69);*/
+    background-color: #f9c800;
 
 }
 
