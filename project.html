@@ -58,7 +58,7 @@
             <p>Untappd is the largest existing competitor in the market. They are a craft beer review app on iOS and Android with a social element. The app allows users to check into venues, try and review beers, tagging them to that specific location (Untappd, n.d.). The app had 8 million users, 900 million venue check-ins and 20,000 businesses as of mid-2020 (Smith, 2021). Similarities between our concept and their product include the map UI, social elements, and badges. However, our concept differs with their product exclusively focused on reviews of beers, whereas ours will focus on reviews of venues. </p>
             <p>Untappd's business model charges bars and breweries an annual fee for membership, providing them features including digital and print menu web-based design applications and hosting, access to specific customer groups, event marketing, push/email marketing, social media integrations, and access to a beer database. There are other apps that use the same model, including Beermenus (Untappd for Business price increase, 2022). Giving bar owners control of their location is a feature we are planning to include, but we had not considered monetizing this feature.</p>
             <p>The app MisterGoodBeer is another product on the market with similarities to the Pursuit of Hoppiness. It shows nearby locations and can be filtered by price, and happy hour. Contributions to the app are made by the users. The app has over 151,000 downloads and 12,400 contributors (MisterGoodBeer - Les bières pas chères autour de soi avec l'happy hour, n.d.). The app features a similar UI and venue focus but lacks the social element that we plan to bring.</p>
-        
+
             <h2>References:</h2>
             <p>Beermenus.com. 2022. Untappd for Business price increase. [online] Available at: <https://www.beermenus.com/blog/312-untappd-for-business-price-increase> [Accessed 20 January 2022]. </p>
             <p>Kelsey, R., 2016. 2016 Australian Craft Beer Survey Results. [online] Beer Cartel. Available at: <https://www.beercartel.com.au/blog/2016-australian-craft-beer-survey-results/> [Accessed 8 February 2022].</p>
@@ -105,7 +105,7 @@
             <p>The mockup data is currently static.  For the closed alpha release the code will have to be developed to allow incorporation of data from the REST API.</p>
             <p>The anticipated parameters in the request to the database for map data are Map Zoom Level and Map Centrepoint.  This information will drive a query that will feed data back to the client using our API in a format like the following:</p>
             <div class="codeblock">
-            <pre> 
+            <pre>
 {
     0: {
         "venue": "Another Beer place",
@@ -117,8 +117,8 @@
         }
 }</pre>
             </div>
-            
-            <p>Storing the unique score, pricing and atmospheres as integers will allow flexibilty going forward in how the information is presented to the user.  For example, "atmosphere" with a value of 6 may be represented along a slider or by a colour scale depending on the direction chosen for the app based on feedback or market research.</p>
+
+            <p>Storing the unique score, pricing and atmospheres as integers will allow flexibilty going forward in how the information is presented to the user.  For example, "atmosphere" with a value of 6 may be represented along a slider or by a colour scale dependinf on the direction chosen for the app based on feedback.</p>
             <p>A demonstration of the map formatted as it would display on a mobile screen is provided.</p>
             <div id="map_outer">
                 <div id="map">
@@ -134,7 +134,7 @@
             <p>For initial testing to reduce costs we have opted for a local machine to host the application data and to deliver the content, the "box under the desk" approach.  A Virtual Private Server arrangement was investigated, but after comparing costs it was decided that a migration to an off-premises solution would only be appropriate after the completion of the closed alpha testing phase.</p>
             <p>Once the decision is made to move to the open beta stage of development, the application data, content, and code will be moved to a cloud hosting provider such as Google. As our development will be completely containerised, it will be a trivial matter to migrate the entire project to a cloud hosting provider that best suits our needs.</p>
             <h3>Selection of a Cloud Service Provider</h3>
-            <p>A variety of providers were investigated as were a number of ways of hosting Pursuit of Hoppiness.  Between Platform as a Service and Infrastructure as a Service architecture it makes sense for us to adopt an IaaS setup as this will reduce our need to manage the operating system and instead focus on upkeep of the application and software supporting the application.(Suite 2018)</p>
+            <p>A variety of providers were investigated as were a number of ways of hosting Pursuit of Hoppiness.  Between Platform as a Service and Infrastructure as a Service architecture it makes sense for us to adopt an IaaS setup as this will reduce our need to manage the operating system and instead focus on upkeep of the application and software supporting the application.</p>
             <p>Google, Amazon, and Microsoft are the big names in this space all offering a product that meets our needs.  They all also provide data centres located in Australia providing low latency times nationwide.  Due to us already adopting Google maps as a service within Pursuit of Hoppiness, Google is a likely frontrunner for selection as it will allow us to keep all billing in one place and reduce complexity.  While we must remain focussed on cost control it may be worth paying a small premium to reduce complexity and risk rather then increasing both to save a small amount.</p>
             <h3>Cloud migration</h3>
             <p>Our cloud migration signals a significant milestone for Pursuit of Hoppiness.  This allows us to extend our reach and further reduce the risk of an outage affecting our users.  Cloud migration is expected to be a quick process with the entire application and database being migrated over the course of a single day with minimum outage.</p>
@@ -190,7 +190,7 @@
             <p><a href="https://stackoverflow.com/questions/8112831/implementing-comments-and-likes-in-database">Image Credit: Branko Dimitrijevic, stackoverflow.com</a></p>
             <h3>Beyond the Scope/Chat Features</h3>
             <p>Moving forward, the app will start to include more social features such as, crucially, a chat/messaging service in order to connect with like-minded drinkers, creating a more satisfying experience for all involved. Tentative preliminary research into this area has yielded multiple different approach options for implementing such a feature, using tech stacks involving such things as MongoDB's NoSQL, or an extension on the current PostgreSQL implementation,, Nginx, or possibly integrated with AWS to take off some of the server slack on our side. From the storage half of the equation, depending on the level of security desired one can either store chat messages on the server in an NoSQL database <i>or</i> increase security by storing chat messages locally on user's devices, encrypting it before it is sent to the server and decrypted on the receiving device. Both of these options are worth considering for future social implementations.</p>
-            
+
             <h2>User Experience and User Interface</h2>
             <p>UX (User experience design) and UI (User interface design) are two terms often used interchangeably and although the two are closely linked with some overlap, they are separate areas that have differences in goals and approach.</p>
             <p>UX focuses on a user's journey through a product or application whereas UI focus on the aesthetics and visual elements of an application. The goal of a UX designer is to create an easy, efficient, relevant, and all-around pleasant experiences for the user (Lamprecht, 2022). UI designers work with the wireframe or structure provided by the UX designer and create a visually-appealing easy-to-understand interface (Career Foundry, 2021).</p>
@@ -226,14 +226,13 @@
                 <img src="img/UI UX/Social Wireframe.png">
             </div>
             <p>The venue management features will require a significantly different interface and will be a web portal rather than an app. Initially the features will be limited to the ability to edit their venue description and opening hours, reply to comments and view statistics on venue reviews. These features can be introduced with minimal changes in the app UI but future development including a venue timeline and the ability for patrons to make purchases in app will require a rework of the venue page.</p>
-        
+
             <h2>References:</h2>
             <p>Career Foundry, 2021. UX Design vs UI Design - What's The Difference?. [video] Available at: <https://www.youtube.com/watch?v=5CxXhyhT6Fc> [Accessed 2 February 2022]. </p>
             <p>Gjorgievska, L., 2021. Australian Beer Market Statistics That Raise the Bar. [online] Take a Tumble. Available at: <https://takeatumble.com.au/insights/lifestyle/beer-market-statistics/> [Accessed 2 February 2022]. </p>
             <p>Lamprecht, E., 2022. UX vs. UI Design: What's the Difference? [2022 Guide]. [online] CareerFoundry. Available at: <https://careerfoundry.com/en/blog/ux-design/the-difference-between-ux-and-ui-design-a-laymans-guide/> [Accessed 1 February 2022]. </p>
             <p>Siang, T., 2021. 7 UX Deliverables: What will I be making as a UX designer?. [online] The Interaction Design Foundation. Available at: <https://www.interaction-design.org/literature/article/7-ux-deliverables-what-will-i-be-making-as-a-ux-designer> [Accessed 3 February 2022]. </p>
             <p>Ceci, L., 2022. Top U.S. mapping apps by downloads 2021 | Statista. [online] Statista. Available at: https://www.statista.com/statistics/865413/most-popular-us-mapping-apps-ranked-by-audience/ [Accessed 19 February 2022].</p>
-            <p>Suite, Vm 2018, A Cloud Services Comparison of the Top Three IaaS Providers, CloudHealth by VMware Suite, viewed 19 February 2022, https://blogs.vmware.com/cloudhealth/cloud-services-comparison.</p>
         </div>
     </div>
 
@@ -292,7 +291,8 @@
             <h3>Google Maps</h3>
             <p>Gavin has had some experience using the Google Maps API in the past for small projects that needed to be both interactive and update dynamically.</p>
             <p>Google Maps is chosen over Apple Maps even though initial deployment is planned for an iOS device.  This is because Google Maps will provide an API for web-based, Android-based, and iOS-based applications which will allow for simplification of the product.</p>
-            <p>An API key will need to be generated and locked down to the github project's URI.  This will reduce the risk of the API key being poached by bad actors and running up bills.  A secret key with no constraints was considered to be distributed to the group for testing purposes, but the risk of this information being inadvertently commited to the repository was too high.</p>
+            <h3>OpenAuthorization 2.0</h3>
+            <p>OpenAuthorization's API was used to enable users to loging through existing third-party services such as Google, Twitter, and Facebook.</p>
             <h2>UI/UX</h2>
             <P>Development of the app's UI and UX was Rory's role. He has had design experience but has had no experience working with UI and UX development tools. After research, he settled on developing a prototype using Adobe XD. This was chosen due to its integration with the Adobe Creative Cloud Suite, which was already being used to develop design assets for the project. These Creative Cloud apps all required licensing through Adobe. The specific apps used were:<ul>
                 <li>Adobe XD (Version 47.0.22)</li>
@@ -601,7 +601,7 @@
                     </ul></td>
                     <td><ul>
                       <li>Bug squashing from closed alpha feedback</li>
-                  
+
                     </ul></td>
                 </tr>
                 <tr>
@@ -674,7 +674,7 @@
             <h1>Risks</h1>
             <h2>Cost Overrun</h2>
             <p>Controlling costs in initial phases will allow us to commit more time to development activities. One key expense point for a small organisation could be cloud fees. These can be eliminated completely until they become a necessity. Utilising clever development of microservices on local machines before migrating the system to an IaaS provider will allow us to control costs significantly.</p>
-            
+
             <h2>Security</h2>
             <h3>API Key Storage</h3>
             <p>As the project relies on a number of external services such as Google Maps, we must take steps to keep our API keys safe.  An API key released into the wild could result in huge costs if not detected early or if measures arent taken to restrict the usage of the key (Alp, 2022).  Secret stores should be utilised to prevent any API keys being required to be embedded in code directly, and git pre-commit hooks should be utilised to prevent inadvertent publishing of secrets to repositories.</p>
@@ -684,7 +684,7 @@
 
             <h2>Complexity</h2>
             <p>Controlling complexity will be important.  An overly complicated system will drive up costs by increasing security risk factors, development time, and technical debt. We aim to control complexity by limiting development to small achievable goals and limiting as much scope creep as possible. It may be prudent in some cases to extend development time to ensure that shortcuts are not taken that will lead to an increase in complexity of the system.</p>
-           
+
             <h2>Poor User Adoption</h2>
             <p>An app without users cannot be successful and this is particularly true for an app that’s core functionality is built on user contributions. To mitigate this issue initial data seeding will be outsourced to a market research firm to have user generated content available from launch day. Additionally, the UI and UX team has scheduled time to work on Branding and marketing material for the beta launch, which although it isn’t in their traditional scope, is assigned to them due to our small organization size.</p>
 
@@ -733,7 +733,7 @@
             <p>Other tools built into Teams, such as SharePoint and lists, are also used regularly to support collaborative work and organization.</p>
 
 
-            
+
 
             <h2>Refereneces</h2>
             <p>Alexandra, M., 2016. 6 proven project team communication strategies. [online] CIO. Available at: <https://www.cio.com/article/238521/6-proven-project-team-communication-strategies-2.html> [Accessed 12 January 2022].</p>
