@@ -86,11 +86,28 @@
             <h2>Google Maps Technology</h2>
             <p>Google Maps is the preferred map application to use for this product.</p>
             <p>Google Maps is chosen as it is the most widely-supported across multiple platforms and most users will be familiar with its look and feel.</p>
-
+            <h3>Other considered options</h3>
+            <p>Alternative map products such as Apple Maps and Bing maps were considered however they were discounted fairly early on.  This was largely due to the requirement to reduce the need for different streams of development.  As Google maps can be deployed with a similar look and feel across a variety of platforms, selecting Google Maps allows us to focus development in one area.  As google maps is the most popular navigation app(https://www.statista.com/statistics/865413/most-popular-us-mapping-apps-ranked-by-audience/), developers in the mobile space are also more likely to be familiar with the API.</p>
+            <h3>Prototyping</h3>
             <p>In the initial prototype phase of the product we aim to deliver a small mockup based on static data showing the locations of a number of venues with a brief description. This will help us to decide what important bits of data we can safely display on a mobile device without the screen becoming cluttered.</p>
-            <p>Post-prototype and for Phase 1 we aim to integrate this with data supplied from our backend database.  This information will be fetched by the relevant frontend application using our API and then displayed on the device. As Google Maps supports a JSON input, this is what our API will provide. It is intended that the front end will provide the location of the map view; this will be passed to the database query which will return a dataset to be formatted into JSON with relevant information for display on the map.</p>
             <p>For the purposes of the demo, the API key for Google Maps has been committed to the public repository. The mitigation for this risk is to heavily restrict the key in the Google Cloud Console to the HTTP referrer of the site.  While this means that testing may be impacted between individual users, if they need to test on a local machine, they can replace the existing key with a private key of their own and enact their own controls to prevent pushing it to the repository.</p>
             <p>The mockup data is currently static.  For the closed alpha release the code will have to be developed to allow incorporation of data from the REST API.</p>
+            <p>The anticipated parameters in the request to the database for map data are Map Zoom Level and Map Centrepoint.  This information will drive a query that will feed data back to the client using our API in a format like the following:</p>
+            <div class="codeblock">
+            <pre> 
+{
+    0: {
+        "venue": "Another Beer place",
+        "position": [-25.000, 153.000],
+        "unique_score": 5,
+        "tap_count": 4,
+        "pricing": 6,
+        "atmosphere": 8
+        }
+}</pre>
+            </div>
+            
+            <p>Storing the unique score, pricing and atmospheres as integers will allow flexibilty going forward in how the information is presented to the user.  For example, "atmosphere" with a value of 6 may be represented along a slider or by a colour scale dependinf on the direction chosen for the app based on feedback.</p>
             <p>A demonstration of the map formatted as it would display on a mobile screen is provided.</p>
             <div id="map_outer">
                 <div id="map">
@@ -98,6 +115,9 @@
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoPqle9nsx3uawaEayxKbY3UHc3UmNDJY&callback=initMap&v=weekly" async></script>
                 </div>
             </div>
+            <h3>Post Prototype</h3>
+            <p>Post-prototype and for Phase 1 we aim to integrate this with data supplied from our backend database.  This information will be fetched by the relevant frontend application using our API and then displayed on the device. As Google Maps supports a JSON input, this is what our API will provide. It is intended that the front end will provide the location of the map view; this will be passed to the database query which will return a dataset to be formatted into JSON with relevant information for display on the map.</p>
+            <p>Significant refinement of the mockup will be required to make it match up with the layout envisioned in the <a href="UI_DEV">UI development</a> section</p>
             <h2>Hosting</h2>
             <p>For initial testing to reduce costs we have opted for a local machine to host the application data and to deliver the content, the "box under the desk" approach.  A Virtual Private Server arrangement was investigated, but after comparing costs it was decided that a migration to an off-premises solution would only be appropriate after the completion of the closed alpha testing phase.</p>
             <p>Once the decision is made to move to the open beta stage of development, the application data, content, and code will be moved to a cloud hosting provider such as Google. As our development will be completely containerised, it will be a trivial matter to migrate the entire project to a cloud hosting provider that best suits our needs.</p>
@@ -169,7 +189,7 @@
             <p>The wireframe was made using tools inside XD and the Icons 4 Design plugin. Development of the wireframe was also used as training in XD.</p>
             <center><iframe width="414" height="896" src="https://xd.adobe.com/embed/707902ce-3eaf-48ed-b05c-ca30b6efacf0-252a/" frameborder="0" allowfullscreen></iframe></center>
             <p>During development of the wireframe, swipe navigation was removed as it wasn’t supported by XD, and the Venue page was changed to a pop-up box map overlay instead of its own page.</p>
-            <h3>UI Development</h3>
+            <h3 id="UI_DEV">UI Development</h3>
             <p>When developing the UI for The Pursuit of Hoppiness, emphasis was placed on consistency using already-established interface elements such as buttons and sliders as input controls, commonly used search field structures and map functionality, and use of already-established icons for common functions such as settings and notifications.</p>
             <p>To keep the app consistent with existing branding, assets were reworked and expanded upon for use within the application. Some generic application symbols, such as the login, settings, notification and login icons, were taken from the Icons 4 Design plugin which allows non-attributed use of 5000 icons and symbols. These icons were colored to match the style guide.</p>
             <div class="image_box">
