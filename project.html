@@ -119,12 +119,19 @@
             <p>Post-prototype and for Phase 1 we aim to integrate this with data supplied from our backend database.  This information will be fetched by the relevant frontend application using our API and then displayed on the device. As Google Maps supports a JSON input, this is what our API will provide. It is intended that the front end will provide the location of the map view; this will be passed to the database query which will return a dataset to be formatted into JSON with relevant information for display on the map.</p>
             <p>Significant refinement of the mockup will be required to make it match up with the layout envisioned in the <a href="UI_DEV">UI development</a> section</p>
             <h2>Hosting</h2>
+            <h3>Early phases</h3>
             <p>For initial testing to reduce costs we have opted for a local machine to host the application data and to deliver the content, the "box under the desk" approach.  A Virtual Private Server arrangement was investigated, but after comparing costs it was decided that a migration to an off-premises solution would only be appropriate after the completion of the closed alpha testing phase.</p>
             <p>Once the decision is made to move to the open beta stage of development, the application data, content, and code will be moved to a cloud hosting provider such as Google. As our development will be completely containerised, it will be a trivial matter to migrate the entire project to a cloud hosting provider that best suits our needs.</p>
-            <p>In summary, the application will first be developed on local machines, then hosted in-house for rapid testing of deployment pipelines and to reduce costs, then moved to a cloud hosted solution. This will all be based upon certain milestones being reached within the project.</p>
+            <h3>Selection of a Cloud Service Provider</h3>
+            <p>A variety of providers were investigated as were a number of ways of hosting it.  Between Platform as a Service and Infrastructure as a Service architecture it makes sense for us to adopt an IaaS setup as this will reduce our need to manage the operating system and instead focus on upkeep of the application and software supporting the application.</p>
+            <p>Google, Amazon, and Microsoft are the big names in this space all offering a product that meets our needs.  They all also provide data centres located in Australia providing low latency times nationwide.  Due to us already adopting Google maps as a service within Pursuit of Hoppiness, Google is a likely frontrunner for selection as it will allow us to keep all billing in one place and reduce complexity.  While we must remain focussed on cost control it may be worth paying a small premium to reduce complexity and risk rather then increasing both to save a small amount.</p>
+            <h3>Cloud migration</h3>
+            <p>Our cloud migration signals a significant milestone for Pursuit of Hoppiness.  This allows us to extend our reach and further reduce the risk of an outage affecting our users.  Cloud migration is expected to be a quick process with the entire application and database being migrated over the course of a single day with minimum outage.</p>
+
             <div class="image_box">
                 <img src="img/host_plan.png">
             </div>
+                        <p>In summary, the application will first be developed on local machines, then hosted in-house for rapid testing of deployment pipelines and to reduce costs, then moved to a cloud hosted solution. This will all be based upon certain milestones being reached within the project.</p>
             <h2>OpenAuthorization & Logins</h2>
             <p>When creating an account with our service, we decided we would implement OpenAuthorization so as allow users to join the site through existing accounts such as Google, Facebook and Twitter. Users are also offered the choice to join our application via the standard procedure of creating an account through email and password.</p>
             <p>(Refer to UX Prototype below)</p>
